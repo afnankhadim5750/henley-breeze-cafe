@@ -409,6 +409,57 @@ a:hover { color: var(--coral-deep); }
   padding: 0.45rem 1rem; border-radius: 999px;
 }
 
+/* ---------------- Homepage diversification: visit planner ---------------- */
+.visit-plan { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 2.5rem; align-items: start; }
+.visit-plan-main h3 { font-size: 1.6rem; margin-bottom: 0.8rem; }
+.visit-plan-main p { color: #4c5a57; margin-bottom: 1rem; }
+.visit-plan-main a { font-weight: 600; }
+.visit-plan-list { list-style: none; display: grid; gap: 1rem; }
+.visit-plan-list li {
+  display: flex; gap: 1rem; align-items: flex-start;
+  background: var(--white); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 1.3rem 1.4rem; box-shadow: var(--shadow-sm);
+}
+.visit-plan-list .bi {
+  font-size: 1.3rem; color: #fff;
+  background: linear-gradient(135deg, var(--sea), var(--sea-deep));
+  width: 2.9rem; height: 2.9rem; flex: 0 0 2.9rem;
+  border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+}
+.visit-plan-list strong { display: block; font-size: 1rem; margin-bottom: 0.2rem; }
+.visit-plan-list span { color: var(--muted); font-size: 0.94rem; display: block; }
+.visit-plan-list a { font-weight: 600; }
+@media (max-width: 900px) { .visit-plan { grid-template-columns: 1fr; } }
+
+/* ---------------- Homepage enrichment (experience / FAQ) ---------------- */
+img[width] { height: auto; }
+.experience-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.experience-card {
+  background: var(--white); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 2rem 1.7rem;
+  box-shadow: var(--shadow-sm); border-top: 5px solid var(--sea);
+}
+.experience-card:nth-child(2) { border-top-color: var(--coral); }
+.experience-card:nth-child(3) { border-top-color: var(--sea-deep); }
+.experience-card .bi {
+  font-size: 1.5rem; color: #fff;
+  background: linear-gradient(135deg, var(--sea), var(--sea-deep));
+  width: 3.2rem; height: 3.2rem; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1rem;
+}
+.experience-card:nth-child(2) .bi { background: linear-gradient(135deg, var(--coral), var(--coral-deep)); }
+.experience-card h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+.experience-card p { color: var(--muted); font-size: 0.95rem; margin: 0; }
+.faq-list { max-width: 820px; margin: 0 auto; display: grid; gap: 1rem; }
+.faq-item {
+  background: var(--white); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 1.2rem 1.5rem; box-shadow: var(--shadow-sm);
+}
+.faq-item summary { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.12rem; color: var(--ink); cursor: pointer; }
+.faq-item p { color: var(--muted); font-size: 0.95rem; margin: 0.6rem 0 0; }
+.faq-item a { font-weight: 600; }
+@media (max-width: 900px) { .experience-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; } }
+
 /* ---------------- Responsive ---------------- */
 @media (max-width: 900px) {
   .section { padding: 4rem 0; }
